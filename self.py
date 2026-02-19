@@ -8,7 +8,7 @@
 #
 # number_response = int(input("Please insert a number: "))
 # second_number_response = int(input("Please insert a second number: "))
-# print(f"Well, {name_response}.\nThe exponentiation of {number_response} and {second_number_response} is {number_response ** second_number_response}")
+# print(f"Well, {name_response}.\nThe result of {number_response} and {second_number_response} is {number_response ** second_number_response}")
 #
 # chapter_length = 7.25
 # print(f" {chapter_length} is {type(chapter_length)} ")

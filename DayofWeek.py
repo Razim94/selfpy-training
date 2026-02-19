@@ -13,6 +13,7 @@ elif "." in date_input:
     date_split = date_input.split('.')
 else:
     print("Invalid date format. Usage: DD/MM/YYYY")
+    date_split = "ERROR: bad formatting"
 
 date_calendar = calendar.day_name[calendar.weekday(
     int(date_split[2]), int(date_split[1]), int(date_split[0])
