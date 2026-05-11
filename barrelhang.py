@@ -64,10 +64,33 @@ stage_7 = r"""
 """
 
 # Game setup
-attempts = random.randint(5,10)
-print(f"You have {attempts} attempts to win I guess.")
+
+def guess_letter():
+    letter_guessed = input("Guess a letter: ").lower()
+    return letter_guessed
+
+
+def check_valid_input(letter_guessed, old_letters_guessed): 
+        if (len(letter_guessed) >= 2
+             or not str.isalpha(letter_guessed)
+             or not str.isascii(letter_guessed)
+             or letter_guessed in old_letters_guessed):
+            return False
+        elif (str.isalpha(letter_guessed)
+             and len(letter_guessed) == 1 
+             and str.isascii(letter_guessed)
+             and letter_guessed not in old_letters_guessed):
+            return True
+
+
+def main():
+    old_letters_guessed = []
+    letter_guessed = guess_letter()
+    post_check_letter = check_valid_input(letter_guessed, old_letters_guessed)
+    print(post_check_letter)
 
 print("Welcome to BarrelHang!")
+print(f"You have 5 attempts to win.")
 print(r"""
   ____                      _ _   _
  |  _ \                    | | | | |
@@ -78,3 +101,4 @@ print(r"""
                                                   _| |
                                                  |___|
 """)
+main()
