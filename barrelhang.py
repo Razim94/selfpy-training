@@ -61,7 +61,6 @@ stage_7 = r"""
 """
 
 def guess_letter():
-    """Prompt the user to guess a letter, return it lowercase."""
     letter_guessed = input("Guess a letter: ").lower()
     return letter_guessed
 
