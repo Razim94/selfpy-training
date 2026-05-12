@@ -80,9 +80,9 @@ def check_valid_input(letter_guessed, old_letters_guessed):
         return True
     
 def try_update_letter_guessed(letter_guessed, old_letters_guessed):
-    """Use check_valid_input to check if guessed letter is valid,
+    """Uses check_valid_input to check if guessed letter is valid,
     if yes, add to old_letters_guessed and return True,
-    else print X and sorted list of old letters and return False."""
+    else print 'X' and sorted list of guessed letters and return False."""
     checked_letter = check_valid_input(letter_guessed, old_letters_guessed)
     if checked_letter == False:
         separator = " -> "
