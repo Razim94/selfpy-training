@@ -87,7 +87,7 @@ def try_update_letter_guessed(letter_guessed, old_letters_guessed):
     if checked_letter == False:
         separator = " -> "
         print("X")
-        print(separator.join(old_letters_guessed))
+        print(sorted(separator.join(old_letters_guessed.lower)))
         return False
     elif checked_letter == True:
         old_letters_guessed.append(letter_guessed.lower())
