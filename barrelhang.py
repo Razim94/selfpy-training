@@ -1,6 +1,3 @@
-import random
-
-# BarrelHang - 7 Stages (can scale back to 6 if needed)
 
 stage_1 = r"""
   \\ | | //
