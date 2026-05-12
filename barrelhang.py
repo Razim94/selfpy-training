@@ -81,8 +81,18 @@ def check_valid_input(letter_guessed, old_letters_guessed):
          and str.isascii(letter_guessed)
          and letter_guessed.lower() not in old_letters_guessed):
         return True
-
-
+    
+def try_update_letter_guessed(letter_guessed, old_letters_guessed): 
+    checked_letter = check_valid_input(letter_guessed, old_letters_guessed)
+    if checked_letter == False:
+        separator = " -> "
+        print("X")
+        print(separator.join(old_letters_guessed))
+        return False
+    elif checked_letter == True:
+        old_letters_guessed.append(letter_guessed.lower())
+        return True
+    
 def main():
     old_letters_guessed = []
     letter_guessed = guess_letter()
